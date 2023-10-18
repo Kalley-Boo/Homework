@@ -24,4 +24,7 @@ public class BoardItem {
         this.status = Status.Open;
     }
 
+    public void revertStatus(){
+        if(status.ordinal() > Status.Open.ordinal())
+    }
 }
