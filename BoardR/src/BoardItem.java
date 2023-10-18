@@ -38,8 +38,10 @@ public class BoardItem {
     }
 
     public String viewInfo(){
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        String formattedDate = dueDate.format(formatter);
-        return "'" + title + "', [" + status.name() + " | " + formattedDate + "]";
+        return "'" + title + "', [" + status.name() + " | " + dueDate + "]";
+    }
+
+    public void updateStatus(Status newStatus) {
+        this.status = newStatus;
     }
 }
