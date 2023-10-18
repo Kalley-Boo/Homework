@@ -25,6 +25,14 @@ public class BoardItem {
     }
 
     public void revertStatus(){
-        if(status.ordinal() > Status.Open.ordinal())
+        if(status.ordinal() > Status.Open.ordinal()){
+            status = Status.values()[status.ordinal() - 1];
+        }
+    }
+
+    public void advanceStatus(){
+        if(status.ordinal() < status.Verified.ordinal()){
+            status = Status.values()[status.ordinal() + 1];
+        }
     }
 }
