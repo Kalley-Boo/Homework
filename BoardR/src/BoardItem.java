@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 enum Status {
     Open, Todo, InProgress, Done, Verified
@@ -34,5 +35,11 @@ public class BoardItem {
         if(status.ordinal() < status.Verified.ordinal()){
             status = Status.values()[status.ordinal() + 1];
         }
+    }
+
+    public String viewInfo(){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedDate = dueDate.format(formatter);
+        return "'" + title + "', [" + status.name() + " | " + formattedDate + "]";
     }
 }
