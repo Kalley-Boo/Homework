@@ -1,4 +1,6 @@
 import java.time.LocalDate;
+import java.util.List;
+import java.util.ArrayList;
 
 enum Status {
     OPEN, TODO, IN_PROGRESS, DONE, VERIFIED
@@ -8,11 +10,14 @@ public class BoardItem {
     private String title;
     private LocalDate dueDate;
     private Status status;
+    private final List<EventLog> eventLogs;
     //----------------constructor---------------------
     public BoardItem(String title, LocalDate dueDate){
         setTitle(title);
         setDueDate(dueDate);
         this.status = Status.OPEN;
+        this.eventLogs = new ArrayList<>();
+        eventLogs.add(new EventLog("Item created: '" + title + "', [" + status + " | " + dueDate + "]"));
     }
     //-----------------methods-----------------------
     public void revertStatus(){

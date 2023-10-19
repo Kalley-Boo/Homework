@@ -2,11 +2,24 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        EventLog log = new EventLog("An important thing happened");
-        System.out.println(log.getDescription());
-        System.out.println(log.viewInfo());
+        BoardItem item = new BoardItem("Refactor this mess", LocalDate.now().plusDays(2));
+        item.setDueDate(item.getDueDate().plusYears(2));
+        item.setTitle("Not that important");
+        item.revertStatus();
+        item.advanceStatus();
+        item.revertStatus();
 
-        EventLog log2 = new EventLog();
+        item.viewInfo();
+
+        System.out.println("\n--------------\n");
+
+        BoardItem anotherItem = new BoardItem("Don't refactor anything",  LocalDate.now().plusDays(10));
+        anotherItem.advanceStatus();
+        anotherItem.advanceStatus();
+        anotherItem.advanceStatus();
+        anotherItem.advanceStatus();
+        anotherItem.advanceStatus();
+        anotherItem.viewInfo();
 
 
     }
