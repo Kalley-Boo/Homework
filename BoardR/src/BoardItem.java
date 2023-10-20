@@ -80,7 +80,6 @@ public class BoardItem {
         }
     }
 
-
     public LocalDate getDueDate(){
         return dueDate;
     }
