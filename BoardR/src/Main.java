@@ -9,7 +9,7 @@ public class Main {
         item.advanceStatus();
         item.revertStatus();
 
-        item.viewInfo();
+        item.displayHistory();
 
         System.out.println("\n--------------\n");
 
@@ -19,8 +19,6 @@ public class Main {
         anotherItem.advanceStatus();
         anotherItem.advanceStatus();
         anotherItem.advanceStatus();
-        anotherItem.viewInfo();
-
-
+        anotherItem.displayHistory();
     }
 }
