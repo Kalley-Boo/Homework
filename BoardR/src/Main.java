@@ -7,7 +7,11 @@ public class Main {
 
         Board board = new Board();
 
-        board.items.add(item1);
-        board.items.add(item2);
+        board.addItem(item1); // add item1
+        board.addItem(item2); // add item2
+        board.addItem(item1); // do nothing - item1 already in the list
+        board.addItem(item2); // do nothing - item2 already in the list
+
+        System.out.println(board.totalItems()); // count: 2
     }
 }
