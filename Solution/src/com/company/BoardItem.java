@@ -14,15 +14,15 @@ public class BoardItem {
     private String title;
     private Status status;
     private LocalDate dueDate;
-    private final List<EventLog> history = new ArrayList<>();
+    protected final List<EventLog> history = new ArrayList<>();
 
-    public BoardItem(String title, LocalDate dueDate) {
+    public BoardItem(String title, LocalDate dueDate, Status initialStatus) {
         validateDueDate(dueDate);
         validateTitle(title);
 
         this.title = title;
         this.dueDate = dueDate;
-        this.status = INITIAL_STATUS;
+        this.status = initialStatus;
 
         logEvent(String.format("Item created: %s", viewInfo()));
     }
@@ -87,7 +87,7 @@ public class BoardItem {
         }
     }
 
-    private void logEvent(String event) {
+    protected void logEvent(String event) {
         history.add(new EventLog(event));
     }
 
