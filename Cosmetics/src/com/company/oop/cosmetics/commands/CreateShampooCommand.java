@@ -17,7 +17,7 @@ public class CreateShampooCommand implements Command {
 
     @Override
     public String execute(List<String> parameters) {
-        throw new UnsupportedOperationException("Not implemented yet.");
+
     }
 
 }

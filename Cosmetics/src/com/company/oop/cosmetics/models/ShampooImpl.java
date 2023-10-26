@@ -34,10 +34,11 @@ public class ShampooImpl implements Product, Shampoo {
     }//constructor ShampooImpl
 
     //-------------------------------------functions----------------------------------------
+
     public String print(){
         return String.format("#%s %s\n #Price: %.2f\n #Gender: %s\n #Milliliters: %d\n #Usage: %s",
                 getName(), getBrandName(), getPrice(), getGenderType(), getMillilitres(), getUsageType());
-    }//toString overriding
+    }//print
     private void validateName(String name){
         if(name.length() < NAME_MIN_LENGTH || name.length() > NAME_MAX_LENGTH){
             throw new IllegalArgumentException("Name should be between 3 and 10 symbols.");
@@ -88,6 +89,7 @@ public class ShampooImpl implements Product, Shampoo {
     public void setUsageType(UsageType usageType) {
         this.usageType = usageType;
     }//setUsageType
+
     public String getName() {
         return name;
     }
