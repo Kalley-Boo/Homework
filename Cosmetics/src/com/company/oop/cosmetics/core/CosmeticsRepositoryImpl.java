@@ -46,7 +46,12 @@ public class CosmeticsRepositoryImpl implements CosmeticsRepository {
 
     @Override
     public Product findProductByName(String productName) {
-        throw new UnsupportedOperationException("Not implemented yet.");
+        for(Product product : getProducts()){
+            if(product.getName().equalsIgnoreCase(productName)){
+                return product;
+            }
+        }
+        throw new IllegalArgumentException(String.format(PRODUCT_DOES_NOT_EXIST, productName));
     }
 
     @Override

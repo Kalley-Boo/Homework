@@ -95,6 +95,6 @@ public class ToothpasteImpl implements Product, Toothpaste {
         return genderType;
     }//getGenderTypе
     public List<String> getIngredients(){
-        return new ArrayList<>(ingredients);
+        return new ArrayList<>(this.ingredients);
     }
 }
