@@ -122,7 +122,7 @@ public class MyListImpl<T> implements MyList<T> {
     }//swap
 
     @Override
-    public void print () {
+    public void print() {
         StringBuilder sb = new StringBuilder("[");
         for(int i = 0; i < size; i++){
             sb.append(elements[i]);
