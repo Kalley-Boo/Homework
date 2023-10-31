@@ -2,7 +2,6 @@ package com.company.oop;
 
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.ListIterator;
 
 public class MyListImpl<T> implements MyList<T> {
     private static final int DEAF_CAP = 4;
