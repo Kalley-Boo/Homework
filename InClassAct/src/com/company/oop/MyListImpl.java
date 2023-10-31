@@ -112,7 +112,7 @@ public class MyListImpl<T> implements MyList<T> {
     }//clear
 
     @Override
-    public void swap(int from, int to) {
+    public void swap (int from, int to) {
         if(from < 0 || from >= size || to < 0 || to >= size){
             throw new IndexOutOfBoundsException("Index out of range");
         }
