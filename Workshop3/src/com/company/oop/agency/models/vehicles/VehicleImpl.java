@@ -15,6 +15,13 @@ abstract class VehicleImpl implements Vehicle {
         this.type = type;
     }
 
+    private void setId(int id){
+        this.id = id;
+    }
+    private void setPassengerCapacity(int passengerCapacity){
+        this.passengerCapacity = passengerCapacity;
+    }
+
     public int getId() {
         return id;
     }
